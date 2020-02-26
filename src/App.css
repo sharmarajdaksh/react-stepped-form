@@ -1,38 +1,255 @@
 .App {
-  text-align: center;
+	height: 100vh;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #0984e3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.formbox {
+	width: 40%;
+	min-width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.formbox .kewl-text {
+	font-size: 100px;
+	color: white;
+	font-weight: 300;
+	line-height: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.kewl-text-right {
+	text-align: right;
+}
+.kewl-text-left {
+	text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.formbox input {
+	box-sizing: border-box;
+	background-color: #0984e3;
+	color: white;
+	width: 100%;
+	font-family: inherit;
+	font-size: 21px;
+	margin: auto;
+	padding: 1rem 2rem;
+	border: 3px white solid;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-input-placeholder {
+	/* WebKit, Blink, Edge */
+	color: #eee;
+}
+:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #eee;
+	opacity: 1;
+}
+::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #eee;
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: #eee;
+}
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: #eee;
+}
+
+::placeholder {
+	/* Most modern browsers support this now. */
+	color: #eee;
+}
+
+.formbox input:focus {
+	outline: none;
+}
+
+.submit button,
+.formbox button {
+	font-family: inherit;
+	background-color: transparent;
+	padding: 1rem 2rem;
+	font-size: 21px;
+	font-weight: 700;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	color: white;
+	outline: none;
+	border: 2px solid white;
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-ms-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	margin-top: 2rem;
+}
+
+.submit button:hover,
+.formbox button:hover {
+	cursor: pointer;
+	background-color: white;
+	color: #0984e3;
+}
+
+.first-button {
+	margin-right: 1rem;
+}
+
+.submit h1 {
+	font-size: 100px;
+	font-weight: 300;
+	color: white;
+}
+
+.submit h3 {
+	font-size: 50px;
+	font-weight: 300;
+	color: white;
+}
+
+.fade-enter {
+	opacity: 0;
+}
+.fade-enter-active {
+	opacity: 1;
+	transition: opacity 200ms;
+	-webkit-transition: opacity 200ms;
+	-moz-transition: opacity 200ms;
+	-ms-transition: opacity 200ms;
+	-o-transition: opacity 200ms;
+}
+.fade-exit {
+	opacity: 1;
+}
+.fade-exit-active {
+	opacity: 0;
+	transition: opacity 200ms;
+	-webkit-transition: opacity 200ms;
+	-moz-transition: opacity 200ms;
+	-ms-transition: opacity 200ms;
+	-o-transition: opacity 200ms;
+}
+
+.slide-enter {
+	transform: translate(100%);
+	-webkit-transform: translate(100%);
+	-moz-transform: translate(100%);
+	-ms-transform: translate(100%);
+	-o-transform: translate(100%);
+}
+.slide-enter-active {
+	transform: translate(0%);
+	transition: transform 200ms;
+	-webkit-transition: transform 200ms;
+	-moz-transition: transform 200ms;
+	-ms-transition: transform 200ms;
+	-o-transition: transform 200ms;
+	-webkit-transform: translate(0%);
+	-moz-transform: translate(0%);
+	-ms-transform: translate(0%);
+	-o-transform: translate(0%);
+}
+
+.slide-exit {
+	transform: translate(0%);
+	-webkit-transform: translate(0%);
+	-moz-transform: translate(0%);
+	-ms-transform: translate(0%);
+	-o-transform: translate(0%);
+}
+
+.slide-exit-active {
+	transform: translate(-100%);
+	transition: transform 200ms;
+	-webkit-transform: translate(-100%);
+	-moz-transform: translate(-100%);
+	-ms-transform: translate(-100%);
+	-o-transform: translate(-100%);
+	-webkit-transition: transform 200ms;
+	-moz-transition: transform 200ms;
+	-ms-transition: transform 200ms;
+	-o-transition: transform 200ms;
+}
+.slide-back-enter {
+	transform: translate(-100%);
+	-webkit-transform: translate(-100%);
+	-moz-transform: translate(-100%);
+	-ms-transform: translate(-100%);
+	-o-transform: translate(-100%);
+}
+.slide-back-enter-active {
+	transform: translate(0%);
+	transition: transform 200ms;
+	-webkit-transition: transform 200ms;
+	-moz-transition: transform 200ms;
+	-ms-transition: transform 200ms;
+	-o-transition: transform 200ms;
+	-webkit-transform: translate(0%);
+	-moz-transform: translate(0%);
+	-ms-transform: translate(0%);
+	-o-transform: translate(0%);
+}
+
+.slide-back-exit {
+	transform: translate(0%);
+	-webkit-transform: translate(0%);
+	-moz-transform: translate(0%);
+	-ms-transform: translate(0%);
+	-o-transform: translate(0%);
+}
+
+.slide-back-exit-active {
+	transform: translate(100%);
+	transition: transform 250ms;
+	-webkit-transform: translate(100%);
+	-moz-transform: translate(100%);
+	-ms-transform: translate(100%);
+	-o-transform: translate(100%);
+	-webkit-transition: transform 250ms;
+	-moz-transition: transform 250ms;
+	-ms-transition: transform 250ms;
+	-o-transition: transform 250ms;
+}
+
+@media (max-width: 700px) {
+	.formbox .kewl-text {
+		font-size: 4rem;
+	}
+
+	.formbox input {
+		font-size: 16px;
+		padding: 1rem 1rem;
+		border: 2px white solid;
+	}
+	.submit button,
+	.formbox button {
+		font-size: 15px;
+		padding: 0.5rem 1rem;
+		border: 2px white solid;
+	}
+
+	.submit h1 {
+		font-size: 60px;
+		color: white;
+	}
+
+	.submit h3 {
+		font-size: 30px;
+	}
 }
